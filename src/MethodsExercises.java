@@ -28,12 +28,12 @@ public class MethodsExercises {
         Scanner scn = new Scanner(System.in);
         int answer = scn.nextInt();
         if (answer <= 1 || answer >= 10){
-            getInteger();
+//            getInteger();
         }
         else if (answer >= 1 && answer <= 10){
           System.out.println("Thank you");
         }
+        return 1;
 
-        if
     }
 }

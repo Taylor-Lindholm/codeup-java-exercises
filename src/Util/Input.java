@@ -3,18 +3,18 @@ package Util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scn;
+    private static Scanner scn;
 
     public Input(){
         this.scn = new Scanner(System.in);
     }
 
-    String getString(){
+    static String getString(){
         System.out.println("Please enter a string.");
         String userStringInput = scn.nextLine();
         return userStringInput;
     }
-    boolean yesNo(){
+    public static boolean yesNo(){
         System.out.println("Continue yes or no");
         String userBoolean = scn.nextLine();
         if (userBoolean.equalsIgnoreCase("y")){
@@ -23,7 +23,7 @@ public class Input {
             return false;
         }
     }
-    int getInt(int min, int max){
+    static int getInt(int min, int max){
         System.out.println("please enter a number between 1 and 100");
         int userInt = scn.nextInt();
         while (userInt >= max || userInt <= min){
@@ -32,18 +32,19 @@ public class Input {
         }
         return userInt;
     }
-    int getInt(){
+    static int getInt(){
         System.out.println("Pleae enter an integer");
         int userInt = scn.nextInt();
         return userInt;
     }
-    double getDouble(double min, double max){
+    static double getDouble(double min, double max){
         System.out.println("Please enter an integer");
         double userDouble = scn.nextDouble();
         return userDouble;
     }
-    double getDouble(){
+    public static double getDouble(){
         System.out.println("Please enter any number");
         return scn.nextDouble();
     }
+
 }
