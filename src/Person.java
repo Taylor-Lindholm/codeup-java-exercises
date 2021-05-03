@@ -1,9 +1,5 @@
-import java.util.Scanner;
 public class Person {
-
-    System.out.println("Please enter name");
-    Scanner scn = new Scanner(System.in);
-    public String name = scn.nextLine();
+    public String name = "Taylor";
     public String getName(){
         return name;
     }
@@ -14,5 +10,6 @@ public class Person {
     public void sayHello(){
     System.out.println("Hello " + name);
     }
+
 
 }
