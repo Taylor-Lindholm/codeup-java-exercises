@@ -23,11 +23,19 @@ public class Input {
             return false;
         }
     }
-    static int getInt(int min, int max){
-        System.out.println("please enter a number between 1 and 100");
+    public int getInt(int min, int max){
         int userInt = scn.nextInt();
         while (userInt >= max || userInt <= min){
-            System.out.println("please enter a number between 1 and 100");
+            System.out.println("What would you like to do?");
+            System.out.println(" ");
+            System.out.println("0 - exit");
+            System.out.println("1 - view all movies");
+            System.out.println("2 - view movies in the animated category");
+            System.out.println("3 - view movies in the drama category");
+            System.out.println("4 - view movies in the horror category");
+            System.out.println("5 - view movies in the scifi category");
+            System.out.println(" ");
+            System.out.print("Enter your choice: ");
              userInt = scn.nextInt();
         }
         return userInt;
