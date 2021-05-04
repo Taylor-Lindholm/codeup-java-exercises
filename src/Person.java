@@ -1,14 +1,19 @@
 public class Person {
-    public String name = "Taylor";
+    public String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public void setName(String name){
     this.name = name;
     }
     public void sayHello(){
-    System.out.println("Hello " + name);
+    System.out.println("Hello " + this.name);
     }
 
 

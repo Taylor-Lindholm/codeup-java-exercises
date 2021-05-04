@@ -43,7 +43,7 @@ public class Input {
         return userDouble;
     }
     public static double getDouble(){
-        System.out.println("Please enter any number");
+        scn = new Scanner(System.in);
         return scn.nextDouble();
     }
 
