@@ -23,7 +23,7 @@ public class MoviesApplication {
             case 0:
                 System.out.println("Thanks! Come again!");
             case 1:
-                for (int i = 0; i >= movieList.length )
+//                for (int i = 0; i >= movieList.length;);
         }
 
     }
