@@ -15,6 +15,12 @@ public class ServerNameGenerator {
             System.out.print(names[i][randomNumber]);
 
         }
+
+
+
+
+
+        }
     }
 
-}
+
