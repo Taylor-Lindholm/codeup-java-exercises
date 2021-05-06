@@ -36,4 +36,5 @@ public class MethodsExercises {
         return 1;
 
     }
+
 }
