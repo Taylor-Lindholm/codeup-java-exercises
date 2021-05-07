@@ -40,8 +40,8 @@ public class Input {
         }
         return userInt;
     }
-    static int getInt(){
-        System.out.println("Pleae enter an integer");
+    public int getInt(String question){
+        System.out.println(question);
         int userInt = scn.nextInt();
         return userInt;
     }
