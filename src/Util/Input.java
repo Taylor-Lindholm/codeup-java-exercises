@@ -11,13 +11,15 @@ public class Input {
 
     public String getString(String question){
         System.out.println(question);
+        this.scn = new Scanner(System.in);
         String userStringInput = scn.nextLine();
         return userStringInput;
     }
-    public static boolean yesNo(){
-        System.out.println("Continue yes or no");
+    public boolean yesNo(String question){
+        System.out.println(question);
+        this.scn = new Scanner(System.in);
         String userBoolean = scn.nextLine();
-        if (userBoolean.equalsIgnoreCase("y")){
+        if (userBoolean.equalsIgnoreCase("y")|| userBoolean.equalsIgnoreCase("yes")){
             return true;
         } else {
             return false;
@@ -42,6 +44,7 @@ public class Input {
     }
     public int getInt(String question){
         System.out.println(question);
+        this.scn = new Scanner(System.in);
         int userInt = scn.nextInt();
         return userInt;
     }

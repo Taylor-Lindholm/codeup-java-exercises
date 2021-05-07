@@ -10,13 +10,13 @@ public class GroceryListApp {
 
         while (true) {
 
-            String yesNo = userAnswer.getString("Would you like to keep adding to your grocery list??");
+            Boolean options = userAnswer.yesNo("Would you like to keep adding to your grocery list??");
 
-            if (yesNo.equals("yes")) {
+            if (options) {
                 System.out.println("Current list items are: " + groceryList);
                 String shoppingItem = userAnswer.getString("What grocery item would you like to add?");
                 System.out.println("Item added.");
-                Integer numberOfItems = userAnswer.getInt("How many items would you like to add?");
+                Integer numberOfItems = userAnswer.getInt("How many " + shoppingItem + "s would you like to add?");
                 groceryList.put(shoppingItem, numberOfItems);
                 System.out.println(groceryList);
             } else {
