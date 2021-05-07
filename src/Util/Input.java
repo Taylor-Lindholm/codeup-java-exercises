@@ -9,8 +9,8 @@ public class Input {
         this.scn = new Scanner(System.in);
     }
 
-    static String getString(){
-        System.out.println("Please enter a string.");
+    public String getString(String question){
+        System.out.println(question);
         String userStringInput = scn.nextLine();
         return userStringInput;
     }
