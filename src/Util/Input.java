@@ -28,16 +28,6 @@ public class Input {
     public int getInt(int min, int max){
         int userInt = scn.nextInt();
         while (userInt >= max || userInt <= min){
-            System.out.println("What would you like to do?");
-            System.out.println(" ");
-            System.out.println("0 - exit");
-            System.out.println("1 - view all movies");
-            System.out.println("2 - view movies in the animated category");
-            System.out.println("3 - view movies in the drama category");
-            System.out.println("4 - view movies in the horror category");
-            System.out.println("5 - view movies in the scifi category");
-            System.out.println(" ");
-            System.out.print("Enter your choice: ");
              userInt = scn.nextInt();
         }
         return userInt;
@@ -45,8 +35,13 @@ public class Input {
     public int getInt(String question){
         System.out.println(question);
         this.scn = new Scanner(System.in);
-        int userInt = scn.nextInt();
-        return userInt;
+        String userInt = scn.nextLine();
+        try {
+            Integer.valueOf(userInt);
+        } catch (Exception e) {
+            System.out.println("Something went wrong: " + e.getMessage());
+        }
+       return Integer.parseInt(userInt);
     }
     static double getDouble(double min, double max){
         System.out.println("Please enter an integer");
@@ -55,7 +50,13 @@ public class Input {
     }
     public static double getDouble(){
         scn = new Scanner(System.in);
-        return scn.nextDouble();
+        String userDouble = scn.nextLine();
+        try {
+            Double.valueOf(userDouble);
+        } catch (Exception e){
+            System.out.println("Something went wrong: " + e.getMessage());
+        }
+        return Double.parseDouble(userDouble);
     }
 
 }
